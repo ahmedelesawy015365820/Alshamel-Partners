@@ -1,0 +1,17 @@
+{
+    "Test": true,
+    "Realestate": true,
+    "RealEstate": true,
+    "RecievablePayable": true,
+    "Archiving": true,
+    "GL": true,
+    "Custody": true,
+    "Custodyd": true,
+    "Stock": true,
+    "BoardsRent": true,
+    "ClubMembers": true,
+    "HR": true,
+    "Pos": true,
+    "PointOfSale": true,
+    "Booking": true
+}

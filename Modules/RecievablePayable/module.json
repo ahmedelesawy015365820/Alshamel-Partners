@@ -1,0 +1,11 @@
+{
+    "name": "RecievablePayable",
+    "alias": "recievablepayable",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RecievablePayable\\Providers\\RecievablePayableServiceProvider"
+    ],
+    "files": []
+}

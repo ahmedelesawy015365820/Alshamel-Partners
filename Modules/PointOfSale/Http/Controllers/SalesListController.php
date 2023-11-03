@@ -1,0 +1,52 @@
+<?php
+
+namespace Modules\PointOfSale\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Modules\PointOfSale\Entities\Order;
+use Modules\PointOfSale\Transformers\SalesListResource;
+
+class SalesListController extends Controller
+{
+    public function __construct(private Order $orderModel)
+    {
+        $this->orderModel = $orderModel;
+    }
+
+    public function all(Request $request)
+    {
+        $models = $this->orderModel->filter($request)
+            ->where('order_type', 'sales')
+            ->where('status', 'done')
+            ->orderBy($request->order ? $request->order : 'updated_at', $request->sort ? $request->sort : 'DESC');
+
+        if ($request->per_page) {
+            $models = ['data' => $models->paginate($request->per_page), 'paginate' => true];
+        } else {
+            $models = ['data' => $models->get(), 'paginate' => false];
+        } //
+
+        return responseJson(200, 'success', SalesListResource::collection($models['data']), $models['paginate'] ? getPaginates($models['data']) : null);
+    }
+
+    public function grandTotal(Request $request)
+    {
+        $data = [];
+        $models = $this->orderModel->filter($request)
+            ->where('order_type', 'sales')
+            ->where('status', 'done')
+            ->orderBy($request->order ? $request->order : 'updated_at', $request->sort ? $request->sort : 'DESC')->get();
+
+        $data['item_purchased_total'] = $models->sum(function ($order) {
+            return $order->items->count();
+        });
+        $data['tax_total'] = $models->sum('total_tax');
+        $data['discount_total'] = $models->sum('all_discount');
+        $data['total_total'] = $models->sum('total');
+        $data['due_amount_total'] = $models->sum('due_amount');
+
+        return $data;
+    }
+
+}

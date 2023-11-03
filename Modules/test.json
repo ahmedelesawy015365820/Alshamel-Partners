@@ -1,0 +1,77 @@
+{
+    "key": "sdwkelk45454kdsbfdsfds-asan!b$",
+    "data": [
+        {
+            "op": "ADD",
+            "id": 1,
+            "name": "قسم الإدارة",
+            "name_e": "Management Department"
+        },
+        {
+            "op": "ADD",
+            "id": 2,
+            "name": "قسم الاعلان",
+            "name_e": "Advertisments Department"
+        },
+        {
+            "op": "ADD",
+            "id": 3,
+            "name": "قسم التحرير ",
+            "name_e": "Editorial Department"
+        },
+        {
+            "op": "ADD",
+            "id": 4,
+            "name": "قسم التوزيع ",
+            "name_e": "Distripution Department"
+        },
+        {
+            "op": "ADD",
+            "id": 5,
+            "name": "المطبعة التجارية ",
+            "name_e": "Commercial Printing Press "
+        },
+        {
+            "op": "ADD",
+            "id": 6,
+            "name": "مطبعة الجريدة",
+            "name_e": "Newspaper Printing Press "
+        },
+        {
+            "op": "ADD",
+            "id": 7,
+            "name": "قسم التعبئة",
+            "name_e": "Packing Department"
+        },
+        {
+            "op": "ADD",
+            "id": 8,
+            "name": "الموزعيين",
+            "name_e": "Distriputers"
+        },
+        {
+            "op": "ADD",
+            "id": 9,
+            "name": "موظفين الشئون",
+            "name_e": "Sho2on Dep"
+        },
+        {
+            "op": "ADD",
+            "id": 10,
+            "name": "قسم تكنولوجيا المعلومات",
+            "name_e": "IT department"
+        },
+        {
+            "op": "ADD",
+            "id": 12,
+            "name": "قسم كويت نيوز",
+            "name_e": "Kuwait News"
+        },
+        {
+            "op": "ADD",
+            "id": 14,
+            "name": "قسم 22",
+            "name_e": "2"
+        }
+    ]
+}

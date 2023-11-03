@@ -1,0 +1,11 @@
+{
+    "name": "BoardsRent",
+    "alias": "boardsrent",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BoardsRent\\Providers\\BoardsRentServiceProvider"
+    ],
+    "files": []
+}

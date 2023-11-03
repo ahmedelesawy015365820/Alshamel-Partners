@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('rlst_reservations', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('branch_id');
+            $table->foreignId('document_id')->nullable();
+            $table->foreignId('serial_id')->nullable();
+            $table->date("date");
+            $table->foreignId('customer_id');
+            $table->foreignId('salesman_id');
+            $table->date("start_date");
+            $table->date("end_date");
+            $table->string('module_type')->nullable();
+            $table->integer("serial_number")->nullable();
+            $table->string("prefix")->nullable();
+            $table->softDeletes();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('rlst_reservations');
+    }
+};

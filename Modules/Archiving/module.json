@@ -1,0 +1,11 @@
+{
+    "name": "Archiving",
+    "alias": "archiving",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Archiving\\Providers\\ArchivingServiceProvider"
+    ],
+    "files": []
+}

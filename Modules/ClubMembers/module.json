@@ -1,0 +1,11 @@
+{
+    "name": "ClubMembers",
+    "alias": "clubmembers",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ClubMembers\\Providers\\ClubMembersServiceProvider"
+    ],
+    "files": []
+}

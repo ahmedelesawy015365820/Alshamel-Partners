@@ -1,0 +1,11 @@
+{
+    "name": "GL",
+    "alias": "gl",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\GL\\Providers\\GLServiceProvider"
+    ],
+    "files": []
+}
